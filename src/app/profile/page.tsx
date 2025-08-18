@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Lock } from "lucide-react";
 import ChangePasswordModal from "./modal/changePassword";
-import UserCard from "./components/userCard";
+// import UserCard from "./components/userCard";
 import Link from "next/link";
 import { useUser } from "../context/userContext";
 
@@ -14,8 +14,8 @@ export default function ProfilePage() {
     <div className="p-6 bg-[#120c20] rounded-2xl">
       <h1 className="text-2xl text-white font-bold mb-6">Profile</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <UserCard />
+      <div>
+        {/* <UserCard /> */}
 
         <div className="md:col-span-2 bg-white rounded-2xl shadow p-6">
           <div className="flex justify-between items-center mb-4">

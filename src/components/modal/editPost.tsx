@@ -83,13 +83,13 @@ export default function EditPostModal({
                   type="text"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  placeholder="Judul"
+                  placeholder="Title"
                   className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <textarea
                   value={content}
                   onChange={(e) => setContent(e.target.value)}
-                  placeholder="Konten"
+                  placeholder="Content"
                   className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -99,13 +99,13 @@ export default function EditPostModal({
                   onClick={onClose}
                   className="px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300"
                 >
-                  Batal
+                  Cancel
                 </button>
                 <button
                   onClick={handleSave}
                   className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
                 >
-                  Simpan
+                  Save
                 </button>
               </div>
             </Dialog.Panel>

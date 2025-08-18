@@ -15,7 +15,7 @@ export default function ChangePasswordModal({ isOpen, onClose }: Props) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (newPassword !== confirmPassword) {
-      alert("Password baru dan konfirmasi tidak sama!");
+      alert("New password and confirmation are not the same!");
       return;
     }
     console.log({ currentPassword, newPassword });
