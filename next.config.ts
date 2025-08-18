@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/simplycrud", // sesuai nama repo GitHub kamu
+  basePath: "/fullstack-simple-crud", // sesuai nama repo GitHub kamu
   assetPrefix: "/simplycrud/",
 };
 
