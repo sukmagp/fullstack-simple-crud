@@ -45,12 +45,11 @@ export function useAuth() {
       const data = await apiLogin(username, password);
       setAuthenticated(true);
       setUser(data.user as User);
-      setMessage("Login berhasil");
     } catch (e: unknown) {
       if (e instanceof Error) {
-        setMessage(e.message || "Login gagal");
+        setMessage(e.message || "Login failed");
       } else {
-        setMessage("Login gagal");
+        setMessage("Login failed");
       }
       throw e;
     } finally {
