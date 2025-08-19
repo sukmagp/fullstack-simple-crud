@@ -4,12 +4,33 @@ Simple CRUD application with login/logout authentication, user profiles, and JSO
 
 ## Features
 
-- Next.js 15.4.6: Build powerful and scalable server-side rendered React applications.
-- Tailwind CSS: Rapidly build custom user interfaces using the utility-first CSS framework.
-- Dynamic Routing: Create dynamic routes for handling different pages and content.
-- @headlessui/react: A set of completely unstyled, fully accessible UI components for React, designed to integrate beautifully with Tailwind CSS.
-- lucide-react: The library aims to make it easier for designers and developers to incorporate icons into their projects by providing several official packages to make it  easier to use these icons in your project.
-- ESLint and Prettier: Maintain code quality and consistency with the help of ESLint and Prettier.
+1. Auth System
+  - Login & logout (use cookies to store tokens).
+  - Automatically redirect to the login page if you don't have a token.
+
+2. Dashboard
+  - Displays a list of posts.
+  - Post details based on ID (dynamic routing).
+  - Access the details page using the URL /dashboard/[id].
+
+3. CRUD Post
+  - Retrieve post data from the API (/lib/api.ts).
+  - Can create, view details, update, and delete posts.
+
+4. UI/UX
+  - Styling uses Tailwind CSS.
+  - Reusable components (e.g., cards).
+  - Clean structure with src/app (App Router)
+
+## Tech Stack
+
+`Frontend & Server` → Next.js 15 (App Router)
+
+`Styling` → Tailwind CSS + Headless UI
+
+`State & Hooks` → React (useState, useEffect, user context)
+
+`Deployment` → Vercel (default + free custom domain)
 
 ## Prerequisites
 
