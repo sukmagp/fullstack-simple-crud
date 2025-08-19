@@ -25,12 +25,16 @@ export default function EditPostModal({
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
+  // reset form setiap kali post berubah atau modal ditutup
   useEffect(() => {
     if (post) {
       setTitle(post.title);
       setContent(post.content);
+    } else {
+      setTitle("");
+      setContent("");
     }
-  }, [post]);
+  }, [post, isOpen]);
 
   const handleSave = () => {
     if (!title.trim() || !content.trim()) {
@@ -48,9 +52,15 @@ export default function EditPostModal({
     onClose();
   };
 
+  const handleCancel = () => {
+    setTitle("");
+    setContent("");
+    onClose();
+  };
+
   return (
     <Transition appear show={isOpen} as={Fragment}>
-      <Dialog as="div" className="relative z-50" onClose={onClose}>
+      <Dialog as="div" className="relative z-50" onClose={handleCancel}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-200"
@@ -96,7 +106,7 @@ export default function EditPostModal({
 
               <div className="mt-4 flex justify-end gap-2">
                 <button
-                  onClick={onClose}
+                  onClick={handleCancel}
                   className="px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300"
                 >
                   Cancel
