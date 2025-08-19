@@ -1,8 +1,18 @@
+// app/dashboard/[id]/page.tsx
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { getPost } from "@/lib/api";
 
-export default async function DetailPage({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: {
+    id: string;
+  };
+  searchParams?: {
+    [key: string]: string | string[] | undefined;
+  };
+}
+
+export default async function DetailPage({ params }: PageProps) {
   const cookieStore = await cookies();
   const token = cookieStore.get("token")?.value;
   if (!token) redirect("/auth/login");

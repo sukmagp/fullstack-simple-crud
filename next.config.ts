@@ -1,11 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",
-  images: {
-    unoptimized: true,
-  },
-  basePath: "/fullstack-simple-crud", // sesuai nama repo GitHub kamu
-  assetPrefix: "/simplycrud/",
+import type { NextConfig } from "next";
+
+const nextConfig : NextConfig = {
+  
 };
 
-module.exports = nextConfig;
+export default nextConfig;
